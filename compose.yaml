@@ -1,0 +1,42 @@
+# Enki Medical: the API plus its own PostgreSQL. Start with:  docker compose up --build
+# Your keys, grants and stored artifacts live in ./enki-data on your machine (never committed).
+
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-enki}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}
+      POSTGRES_DB: ${POSTGRES_DB:-enki}
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-enki} -d ${POSTGRES_DB:-enki}"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  enki:
+    build: .
+    # Run as your own user so the files in ./enki-data belong to you
+    user: "${ENKI_UID:-1000}:${ENKI_GID:-1000}"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      ENKI_DB_DSN: postgresql://${POSTGRES_USER:-enki}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB:-enki}
+      ENKI_ROOT_PASSWORD: ${ENKI_ROOT_PASSWORD:?set ENKI_ROOT_PASSWORD in .env}
+      ENKI_TENANTS: ${ENKI_TENANTS:-demo-tenant}
+      ENKI_ADMIN_DEVICE_ID: ${ENKI_ADMIN_DEVICE_ID:-admin-device}
+      ENKI_HARDWARE_PROFILE: ${ENKI_HARDWARE_PROFILE:-EMULATED}
+      ENKI_ACTIVE_SET: ${ENKI_ACTIVE_SET:-active_set_v3.json}
+      ENKI_EVENT_LIBRARIES: ${ENKI_EVENT_LIBRARIES:-}
+    ports:
+      - "127.0.0.1:${ENKI_PORT:-8000}:8000"
+    volumes:
+      - ./enki-data:/data
+      - ./libraries:/enki/libraries
+      - ./${ENKI_ACTIVE_SET:-active_set_v3.json}:/enki/${ENKI_ACTIVE_SET:-active_set_v3.json}:ro
+
+volumes:
+  postgres_data:

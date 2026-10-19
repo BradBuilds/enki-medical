@@ -1,0 +1,64 @@
+{
+  "pack_id": "language",
+  "version": "0.1.0",
+  "name": "ENKI Language Vocabulary",
+  "description": "Canonical vocabulary for writing systems, phonology, morphology, semantics, pragmatics, and script glyph coverage markers.",
+  "namespaces_owned": ["language"],
+  "definitions": [
+    {
+      "id": "language.system",
+      "path": "definitions/language.system.json",
+      "type": "system"
+    },
+    {
+      "id": "language.scripts",
+      "path": "definitions/language.scripts.json",
+      "type": "rules"
+    },
+    {
+      "id": "language.phonology",
+      "path": "definitions/language.phonology.json",
+      "type": "custom"
+    },
+    {
+      "id": "language.morphology",
+      "path": "definitions/language.morphology.json",
+      "type": "rules"
+    },
+    {
+      "id": "language.semantics",
+      "path": "definitions/language.semantics.json",
+      "type": "custom"
+    },
+    {
+      "id": "language.pragmatics",
+      "path": "definitions/language.pragmatics.json",
+      "type": "rules"
+    },
+    {
+      "id": "language.glyphs.latin",
+      "path": "definitions/language.glyphs.latin.json",
+      "type": "glyphs"
+    },
+    {
+      "id": "language.glyphs.cyrillic",
+      "path": "definitions/language.glyphs.cyrillic.json",
+      "type": "glyphs"
+    },
+    {
+      "id": "language.glyphs.devanagari",
+      "path": "definitions/language.glyphs.devanagari.json",
+      "type": "glyphs"
+    },
+    {
+      "id": "language.indexes",
+      "path": "definitions/language.indexes.json",
+      "type": "custom"
+    }
+  ],
+  "metadata": {
+    "created": "2026-01-13T00:00:00Z",
+    "author": "ENKI System",
+    "governance": "SPINE-S1.2"
+  }
+}

@@ -1,0 +1,3 @@
+-r services/api/requirements.txt
+# test-only tools
+freezegun>=1.5

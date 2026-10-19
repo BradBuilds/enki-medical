@@ -1,0 +1,24 @@
+# Your node's private state: keys, grants, stored artifacts
+enki-data/*
+!enki-data/.gitkeep
+storage/keys/
+storage/grants/
+storage/artifacts/*/
+*.pem
+*.enc
+*.key
+
+# Local settings and your own active set
+.env
+active_set.local.json
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+
+# Go
+/gdu
+/gdu.exe

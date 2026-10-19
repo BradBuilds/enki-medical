@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0",
+  "activation": {
+    "activation_id": "b859e939-b515-4350-bf46-cfc411007db2",
+    "active_set_version": "3.0.0",
+    "transcript_hash": "sha256:5dc8f91700086cbedb7cbe696a5172dbc8ee050bd7ae371e130f52b4ee2b8874",
+    "activated_at": "2026-01-14T18:57:04.717829+00:00",
+    "activated_by": "Phase-4.1-Determinism-Verification"
+  }
+}

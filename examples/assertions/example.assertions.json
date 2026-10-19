@@ -1,0 +1,116 @@
+[
+  {
+    "assertion_id": "assert_001",
+    "subject": "person_alice",
+    "predicate": "owns",
+    "object": {
+      "kind": "entity_ref",
+      "value": {
+        "entity_id": "device_laptop_001",
+        "entity_type": "device"
+      }
+    },
+    "scope": "local",
+    "timestamp": "2025-12-31T10:00:00Z",
+    "metadata": {
+      "description": "Alice owns a laptop device"
+    }
+  },
+  {
+    "assertion_id": "assert_002",
+    "subject": "person_alice",
+    "predicate": "has_name",
+    "object": {
+      "kind": "string",
+      "value": "Alice Smith"
+    },
+    "scope": "shared",
+    "timestamp": "2025-12-31T10:05:00Z",
+    "source": "user_registration_system"
+  },
+  {
+    "assertion_id": "assert_003",
+    "subject": "dataset_research_data",
+    "predicate": "derived_from",
+    "object": {
+      "kind": "pack_ref",
+      "value": {
+        "pack_id": "base60",
+        "version": "0.1.0"
+      }
+    },
+    "scope": "global",
+    "timestamp": "2025-12-31T12:00:00Z",
+    "metadata": {
+      "description": "Research dataset uses Base-60 pack definitions"
+    }
+  },
+  {
+    "assertion_id": "assert_004",
+    "subject": "dataset_research_data",
+    "predicate": "references",
+    "object": {
+      "kind": "uri",
+      "value": "https://example.com/source/original-data"
+    },
+    "scope": "global",
+    "timestamp": "2025-12-31T12:30:00Z"
+  },
+  {
+    "assertion_id": "assert_005",
+    "subject": "organization_enki",
+    "predicate": "created",
+    "object": {
+      "kind": "entity_ref",
+      "value": {
+        "entity_id": "dataset_research_data",
+        "entity_type": "dataset"
+      }
+    },
+    "scope": "shared",
+    "timestamp": "2025-12-31T09:00:00Z",
+    "source": {
+      "actor": "service",
+      "actor_id": "data_management_service"
+    }
+  },
+  {
+    "assertion_id": "assert_006",
+    "subject": "device_laptop_001",
+    "predicate": "has_status",
+    "object": {
+      "kind": "boolean",
+      "value": true
+    },
+    "scope": "local",
+    "timestamp": "2025-12-31T15:00:00Z",
+    "metadata": {
+      "description": "Device is active/online"
+    }
+  },
+  {
+    "assertion_id": "assert_007",
+    "subject": "person_alice",
+    "predicate": "located_in",
+    "object": {
+      "kind": "string",
+      "value": "Seattle, WA"
+    },
+    "scope": "shared",
+    "timestamp": "2025-12-31T10:00:00Z"
+  },
+  {
+    "assertion_id": "assert_008",
+    "subject": "definition_pack_identity",
+    "predicate": "is_a",
+    "object": {
+      "kind": "string",
+      "value": "definition_pack"
+    },
+    "scope": "global",
+    "timestamp": "2025-12-31T00:00:00Z",
+    "metadata": {
+      "description": "Identity pack type classification"
+    }
+  }
+]

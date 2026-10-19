@@ -1,0 +1,10 @@
+{
+  "$schema": "https://enki.foundation/schemas/assertion/v1",
+  "definition_id": "golden.test",
+  "name": "Golden Test Assertion",
+  "description": "Minimal assertion for golden hash test",
+  "pack_id": "golden-fixture",
+  "version": "1.0.0",
+  "status": "active",
+  "created_at": "2026-01-05T00:00:00Z"
+}

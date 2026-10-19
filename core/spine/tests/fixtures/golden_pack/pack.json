@@ -1,0 +1,16 @@
+{
+  "$schema": "https://enki.foundation/schemas/pack/v1",
+  "pack_id": "golden-fixture",
+  "version": "1.0.0",
+  "name": "Golden Test Fixture Pack",
+  "description": "Minimal pack for golden hash immutability test",
+  "capabilities_provided": [],
+  "capabilities_required": [],
+  "namespaces_owned": ["golden"],
+  "definitions": [
+    {
+      "type": "assertion",
+      "file": "golden.test.json"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+fastapi==0.115.0
+uvicorn[standard]==0.32.1
+pydantic==2.10.3
+jsonschema==4.23.0
+pytest==8.3.4
+httpx==0.28.1
+
+# Phase 3 - Storage
+psycopg2-binary>=2.9.9
+canonicaljson>=2.0.0
+
+# Ed25519 signing and AES-GCM key storage
+cryptography>=42.0

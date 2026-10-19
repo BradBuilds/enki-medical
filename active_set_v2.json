@@ -1,0 +1,38 @@
+{
+  "$schema": "./schemas/active_set.schema.json",
+  "version": "2.1.0",
+  "packs": [
+    {
+      "pack_id": "identity",
+      "version": "0.2.0",
+      "content_hash": "sha256:b023e0406af4daf434fd97b4eae72436a29b422d0ea4d12b3d4509ea19dbb78a"
+    },
+    {
+      "pack_id": "assertionvocab",
+      "version": "0.2.0",
+      "content_hash": "sha256:483f5c57b682fa6d3314a8f627a4b9b1656dc792708126c8484f209e4be095f0"
+    },
+    {
+      "pack_id": "auditvocab",
+      "version": "0.2.0",
+      "content_hash": "sha256:022bbb117f3293c43b47431f4b1a64fbc09a3013364506794d482b5905a64703"
+    },
+    {
+      "pack_id": "base60",
+      "version": "0.2.0",
+      "content_hash": "sha256:e742a368cf1fab5eac675fc674f1097ab58609acc715c47c3b05d0f3ea841374"
+    },
+    {
+      "pack_id": "language",
+      "version": "0.1.0",
+      "content_hash": "sha256:f7786484ce7da1e1bc4ae8d2f5fde757d18ecf7ca6a7ae531dad3030b9d6278d"
+    }
+  ],
+  "metadata": {
+    "name": "Third Admitted Pack Set",
+    "description": "Expansion: language vocabulary library for writing systems, phonology, semantics",
+    "created": "2026-01-13T00:00:00Z",
+    "author": "ENKI System",
+    "purpose": "Add language definitions to support linguistic analysis and glyph systems"
+  }
+}
