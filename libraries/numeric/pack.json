@@ -34,7 +34,7 @@
   "metadata": {
     "authority": "GDU",
     "status": "LOCKED",
-    "owner": "BRAD",
+    "owner": "MAINTAINERS",
     "change_control": "SOLE_MAINTAINER",
     "admission": "CEREMONY_REQUIRED",
     "invariants": [

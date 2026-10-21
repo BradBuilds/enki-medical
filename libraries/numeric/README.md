@@ -3,7 +3,7 @@
 **Pack ID**: `gdu.numeric.core`  
 **Status**: 🔒 LOCKED  
 **Version**: 1.0.0  
-**Authority**: GDU (Brad-only governance)  
+**Authority**: GDU (sole-maintainer governance)  
 **Lock Date**: 2026-01-13
 
 ---
@@ -203,7 +203,7 @@ pytest libraries/numeric/tests/test_numeric_core.py -v
 
 ### Authority
 
-- **Owner**: Brad (sole maintainer)
+- **Owner**: Enki Systems (sole maintainer)
 - **Change Control**: SOLE_MAINTAINER
 - **Admission**: CEREMONY_REQUIRED
 

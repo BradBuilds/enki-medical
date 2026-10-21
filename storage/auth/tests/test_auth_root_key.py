@@ -191,7 +191,7 @@ class TestRootKeySigning:
     def test_signature_deterministic_for_same_message(self, tmp_path):
         """Ed25519 signatures are deterministic (same message → same signature)."""
         key_path = tmp_path / "root.enc"
-        password = "deterministic-test"
+        password = "example-test-password"
         message = b"deterministic test message"
         
         root_key = generate_root_key(str(key_path), password)

@@ -1,7 +1,7 @@
 """
 Phase 3 Milestone 1: Read path and chain verification queries.
 
-Key design decisions per user corrections:
+Key design decisions:
 - Use integer RID ordering (ORDER BY rid ASC, not Base-60 string)
 - Use integer cursors for pagination (no conversion overhead)
 - Handle nullable previous_chain_hash for migration safety

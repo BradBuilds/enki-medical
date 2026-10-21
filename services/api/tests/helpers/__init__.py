@@ -198,7 +198,7 @@ def load_device_private_key(path: str) -> Ed25519PrivateKey:
 def load_admin_device_key() -> Ed25519PrivateKey:
     """Load the bootstrap admin device key."""
     import os
-    return load_device_private_key(os.environ["ENKI_ADMIN_KEY_PATH"])
+    return load_device_private_key(os.environ.get("ENKI_ADMIN_KEY_PATH", "storage/keys/admin_device.pem"))
 
 
 def generate_device_keypair() -> Ed25519PrivateKey:
