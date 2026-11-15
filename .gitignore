@@ -22,3 +22,21 @@ venv/
 # Go
 /gdu
 /gdu.exe
+
+# Secrets and key material
+.env.*
+!*.example
+
+# Build notes and AI-tool files live in the build journal, not in git
+CLAUDE.md
+CLAUDE.local.md
+AGENTS.md
+GEMINI.md
+.claude/
+.cursor/
+.cursorrules
+.cursorignore
+
+# Backup and merge leftovers
+*.bak
+*.orig
